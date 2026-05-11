@@ -65,7 +65,8 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
 @keyframes float { 0%,100% { transform: translateY(-50%) translateY(0px); } 50% { transform: translateY(-50%) translateY(-10px); } }
 /* Make home header position relative for avatar */
 #home-header { position: relative; }
-.header-map-deco { position: absolute; right: -10px; bottom: -10px; width: 130px; opacity: 0.6; pointer-events: none; }
+a.avatar-circle { text-decoration: none; cursor: pointer; }
+a.avatar-circle:active { transform: scale(0.94); }
 
 .home-eyebrow { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); margin-bottom: 6px; }
 .home-title { font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 6px; }
@@ -365,7 +366,7 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
         </div>
         <!-- FOREGROUND GLOBE ILLUSTRATION -->
         <div class="avatar-float" id="avatar-float">
-          <div class="avatar-circle">🌍</div>
+          <a href="https://timeforgeography.co.uk" target="_blank" rel="noopener" class="avatar-circle" title="Time for Geography">🌍</a>
           <div class="avatar-speech">Hi! Ready to revise?</div>
         </div>
         <!-- DECORATIVE MAP LINES (foreground SVG) -->
@@ -750,6 +751,292 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
         </div><!-- /topic 2 -->
 
       </div><!-- /notes padding div — TOPICS 3-10 ADDED IN NEXT COMMITS -->
+
+        <!-- ══ TOPIC 3 — ECOSYSTEMS ══ -->
+        <div class="notes-topic" id="nt3">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt3')">
+            <h2>Topic 3 · Ecosystems &amp; Environments</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">3.1–3.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">3.1</span> Ecosystem Fundamentals</h3>
+              <p>An <span class="nkw">ecosystem</span> is a community of living organisms interacting with each other and their non-living environment (soil, climate, water). Energy flows via food chains; nutrients are cycled.</p>
+              <ul>
+                <li><span class="nkw">Producer</span> — plants that photosynthesise; <span class="nkw">Consumer</span> — animals that eat producers or other consumers</li>
+                <li><span class="nkw">Decomposer</span> — bacteria/fungi breaking down dead matter, returning nutrients to soil</li>
+                <li><span class="nkw">Nutrient cycle</span> — nutrients move between biomass, litter, and soil stores; <span class="nkw">Biodiversity</span> — variety of species; higher biodiversity = more resilient ecosystem</li>
+              </ul>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">3.2</span> Tropical Rainforest (TRF)</h3>
+              <h4>Characteristics</h4>
+              <ul>
+                <li>Located between Tropics of Cancer and Capricorn; South America, Central Africa, SE Asia</li>
+                <li>Climate: high temperature (~27°C year-round), high rainfall (&gt;2000mm/yr), no dry season</li>
+                <li>Layered structure: emergent layer → canopy → understorey → shrub layer → forest floor</li>
+                <li><strong>Nutrient cycle:</strong> rapid decomposition in warm/wet conditions; most nutrients locked in biomass, not soil — soil is actually nutrient-poor (latosol); clearing forest removes nutrients permanently</li>
+                <li>Adaptations: buttress roots for stability in shallow soil; drip-tip leaves to shed water; lianas, epiphytes, bromeliads</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Tropical Rainforest</div>
+                <h4>Amazon Rainforest, South America</h4>
+                <ul>
+                  <li>World's largest TRF: <strong>5.5 million km²</strong>, spanning 9 countries (60% Brazil)</li>
+                  <li>Contains ~<strong>40,000 plant species, 1,300 bird species, 3,000 fish species</strong></li>
+                  <li><strong>Deforestation drivers:</strong> cattle ranching (~70% of clearance), soya farming, logging (legal and illegal), road building opening new areas, mining</li>
+                  <li><strong>Rate:</strong> Brazil lost <strong>11,568 km² in 2022</strong>; down from peak years but still severe</li>
+                  <li><strong>Impacts:</strong> carbon release (~100bn tonnes stored); biodiversity loss; disruption to water cycle (trees recycle rainfall — less forest = less regional rainfall); displacement of indigenous peoples</li>
+                  <li><strong>Management:</strong> REDD+ scheme (payments for avoided deforestation); 30% of Brazilian Amazon legally protected; Lula government (2023) reversed deforestation — fell 50% in 2023; Fairtrade soya certification pressuring supply chains</li>
+                </ul>
+                <div class="nph">[PHOTO: Aerial view of Amazon deforestation — sharp boundary between dense green rainforest and cleared cattle pasture]</div>
+              </div>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">3.3</span> Antarctica — Cold Environment</h3>
+              <h4>Characteristics</h4>
+              <ul>
+                <li>Earth's coldest, windiest, driest continent; average temperatures −50°C inland, −10°C coast</li>
+                <li>Ice sheet averaging <strong>2.3 km thick</strong> — holds 60% of world's fresh water</li>
+                <li>Food web: phytoplankton → <span class="nkw">krill</span> (keystone species) → fish → seals → penguins/whales; remove krill and the whole food web collapses</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Cold Environment</div>
+                <h4>Antarctica</h4>
+                <h4>Value</h4>
+                <ul>
+                  <li><strong>Scientific:</strong> ice cores reveal <strong>800,000 years of climate data</strong>; ozone hole first discovered here; global climate monitoring base</li>
+                  <li><strong>Tourism:</strong> ~80,000 visitors/year; ecotourism revenue, but risks include ship fuel, waste, and non-native species introduction</li>
+                  <li><strong>Resources:</strong> estimated 36–160 billion barrels oil beneath the seabed; vast mineral deposits — currently protected until 2048</li>
+                </ul>
+                <h4>Threats</h4>
+                <ul>
+                  <li><strong>Climate change:</strong> West Antarctic Ice Sheet losing mass; Thwaites Glacier could raise sea levels <strong>65 cm</strong> if fully lost</li>
+                  <li><strong>Krill decline:</strong> warming seas and sea ice loss threaten krill → collapse of food web</li>
+                  <li><strong>Pollution:</strong> microplastics detected in Antarctic snow; ozone hole (now recovering) increased UV exposure</li>
+                </ul>
+                <h4>Management</h4>
+                <ul>
+                  <li><strong>Antarctic Treaty (1959):</strong> 54 nations; demilitarised, scientific cooperation; no territorial claims activated</li>
+                  <li><strong>Protocol on Environmental Protection (1991):</strong> bans mining until 2048; strict waste management rules</li>
+                  <li><strong>IAATO:</strong> limits tourist ship sizes and shore visits; self-regulating industry body</li>
+                </ul>
+                <div class="nph">[PHOTO: Antarctic ice shelf or glacier — vast blue/white expanse; ideally with research ship or penguins for scale]</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /topic 3 -->
+
+        <!-- ══ TOPIC 4 — HAZARDOUS ENVIRONMENTS ══ -->
+        <div class="notes-topic" id="nt4">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt4')">
+            <h2>Topic 4 · Hazardous Environments</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">4.1–4.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">4.1</span> Plate Tectonics</h3>
+              <ul>
+                <li><span class="nkw">Convergent</span> (destructive) — denser oceanic plate subducts under continental → explosive volcanoes, earthquakes, fold mountains (e.g. Andes, Japan)</li>
+                <li><span class="nkw">Divergent</span> (constructive) — plates move apart → magma rises → shield volcanoes, rift valleys (e.g. Mid-Atlantic Ridge, East African Rift)</li>
+                <li><span class="nkw">Conservative</span> — plates slide past each other → earthquakes only, no volcanoes (e.g. San Andreas Fault)</li>
+              </ul>
+              <h4>Earthquakes</h4>
+              <p>Stress builds at plate boundaries → sudden release → seismic waves from the <span class="nkw">focus</span> (depth below surface) and <span class="nkw">epicentre</span> (point on surface directly above). Measured on Moment Magnitude Scale (logarithmic — each point = 10× more energy). Shallow focus earthquakes cause more surface damage.</p>
+              <h4>Volcanoes</h4>
+              <ul>
+                <li><span class="nkw">Shield volcanoes</span> — gentle slopes, runny basaltic lava, less explosive (divergent/hotspot, e.g. Hawaii)</li>
+                <li><span class="nkw">Composite/strato volcanoes</span> — steep sides, viscous lava, explosive eruptions (convergent). Most deadly hazards: <span class="nkw">pyroclastic flows</span> (700°C gas+ash at 100+ km/h), <span class="nkw">lahars</span> (volcanic mudflows), tephra/ash fall</li>
+              </ul>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">4.2</span> Tectonic Case Studies</h3>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Volcanic Eruption — LIC</div>
+                <h4>Nevado del Ruiz / Armero, Colombia — 13 November 1985</h4>
+                <ul>
+                  <li>Composite stratovolcano at 5,321m; Nazca plate subducting under South American plate</li>
+                  <li>Moderate eruption (VEI 3) melted the <strong>Ruiz ice cap</strong> → massive <span class="nkw">lahars</span> channelled down river valleys at <strong>50 km/h</strong></li>
+                  <li>Town of <strong>Armero (pop. 29,000) destroyed in minutes</strong>; ~<strong>23,000 deaths</strong></li>
+                  <li><strong>Why so deadly:</strong> no effective evacuation warning issued; residents told to stay put; night-time eruption; poverty limited evacuation capacity; a hazard map showing Armero at risk had been produced weeks before — the tragedy was preventable</li>
+                  <li>Armero was never rebuilt; site remains a memorial</li>
+                </ul>
+                <div class="nph">[PHOTO: Armero after the lahar — ruins partially buried in grey volcanic mud, scale of destruction visible]</div>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Earthquake + Tsunami — NEE</div>
+                <h4>Tōhoku Earthquake &amp; Tsunami, Japan — 11 March 2011</h4>
+                <ul>
+                  <li>Magnitude <strong>9.1</strong> megathrust; Japan Trench; Pacific plate subducting under North American plate; focus ~32 km deep</li>
+                  <li><strong>40-metre tsunami waves</strong> reached the coast within 30–40 minutes</li>
+                  <li><strong>18,500 people killed</strong> total; 400,000 buildings destroyed or damaged</li>
+                  <li><strong>Fukushima Daiichi:</strong> tsunami disabled cooling systems → partial nuclear meltdown → radioactive contamination → 150,000 evacuated from 20 km exclusion zone</li>
+                  <li><strong>Cost:</strong> estimated <strong>US$360 billion</strong> — most expensive natural disaster in history</li>
+                  <li><strong>Response:</strong> 100,000 Self-Defense Force troops; US military assistance (Operation Tomodachi); ¥25 trillion reconstruction programme; 400 km of new seawall (up to 15m high)</li>
+                  <li><strong>Why better prepared than Armero?</strong> P-wave earthquake early warning, tsunami warning buoys, evacuation routes, earthquake-resistant buildings, regular public drills — yet scale exceeded design specifications</li>
+                </ul>
+                <div class="nph">[PHOTO: Tōhoku coastal town after tsunami — buildings destroyed, large debris field, scale of destruction clearly visible]</div>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Volcanic Threat — HIC</div>
+                <h4>Mount Vesuvius, Italy — Threat to Naples</h4>
+                <ul>
+                  <li>Bay of Naples; Eurasian–African convergent boundary; last erupted <strong>1944</strong>; Europe's most dangerous active volcano</li>
+                  <li><strong>79 CE eruption:</strong> buried Pompeii and Herculaneum in pyroclastic surges; ~16,000 killed; UNESCO World Heritage Site</li>
+                  <li><strong>Current threat:</strong> ~<strong>600,000 people live in the Red Zone</strong>; 3 million in greater Naples; magma chamber monitoring shows ongoing activity; evacuation time needed: <strong>minimum 72 hours</strong></li>
+                  <li><strong>Management:</strong> National Emergency Plan — Red/Yellow/Blue risk zones; evacuation routes planned; €30,000 voluntary relocation incentive for Red Zone residents (largely undersubscribed)</li>
+                  <li><strong>Monitoring:</strong> INGV continuously monitors ground deformation, seismicity, and gas emissions</li>
+                  <li><strong>Challenge:</strong> population has actually grown in the Red Zone since 1944 — familiarity breeds complacency; tourism economy incentivises staying</li>
+                </ul>
+                <div class="nph">[PHOTO: Mount Vesuvius viewed from Naples or Bay of Naples — dense urban population in foreground, volcanic cone behind]</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /topic 4 -->
+
+        <!-- ══ TOPIC 5 — WEATHER, CLIMATE AND CHANGE ══ -->
+        <div class="notes-topic" id="nt5">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt5')">
+            <h2>Topic 5 · Weather, Climate &amp; Change</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">5.1–5.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">5.1</span> Weather and Climate</h3>
+              <p><span class="nkw">Weather</span> = short-term atmospheric conditions at a place. <span class="nkw">Climate</span> = average weather patterns over 30+ years. Climate zones are determined by latitude, altitude, distance from sea, ocean currents, and prevailing winds.</p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">5.2</span> Climate Change — Evidence and Causes</h3>
+              <h4>Evidence</h4>
+              <ul>
+                <li>Global average temperature risen <strong>~1.2°C since pre-industrial levels</strong> (IPCC 2023)</li>
+                <li>Sea level rise: <strong>20 cm since 1900</strong>; currently accelerating at 3.6mm/yr</li>
+                <li>Arctic sea ice extent declining; glaciers retreating globally; more frequent extreme weather events</li>
+                <li>CO₂ now at <strong>420 ppm</strong> — highest in 3 million years</li>
+              </ul>
+              <h4>Causes</h4>
+              <ul>
+                <li><span class="nkw">Enhanced greenhouse effect:</span> CO₂, methane (CH₄), nitrous oxide (N₂O) trap outgoing heat. Human sources: burning fossil fuels, deforestation, agriculture (livestock, rice paddies), cement production, landfill</li>
+                <li>Natural causes (Milankovitch orbital cycles, solar variation, volcanic eruptions) cannot explain the current rapid rate of warming</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Climate Change Impact — SIDS</div>
+                <h4>The Maldives, Indian Ocean</h4>
+                <ul>
+                  <li>1,192 coral islands; <strong>average elevation: 1.5m above sea level</strong>; population ~540,000; economy dependent on tourism (28%) and fishing</li>
+                  <li><strong>Sea level rise threat:</strong> projections suggest <strong>80% of islands uninhabitable by 2050</strong> (high emissions scenario); storm surges already flood land; saltwater intrusion contaminates freshwater lens</li>
+                  <li><strong>Coral bleaching:</strong> warming seas bleach reefs → loss of natural wave protection → island erosion; fishing and tourism both threatened</li>
+                  <li><strong>Adaptation:</strong> <strong>Hulhumalé</strong> — artificial island built 2m above sea level, planned to house 240,000 people; Malé has a <strong>3m sea wall</strong>; stilted buildings; exploring purchasing land in Sri Lanka/India/Australia</li>
+                  <li><strong>Mitigation:</strong> committed to <strong>carbon neutrality by 2030</strong>; 100% renewable energy target; high-profile international advocacy at COP summits</li>
+                  <li><strong>Climate justice:</strong> Maldives contributes &lt;0.003% of global emissions yet faces existential threat — a key argument for differentiated responsibility</li>
+                </ul>
+                <div class="nph">[PHOTO: Maldives island — low-lying land, turquoise lagoon, coral reef, settlements barely above sea level]</div>
+                <div class="nph">[PHOTO: Malé sea wall or Hulhumalé artificial island construction showing adaptation infrastructure]</div>
+              </div>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">5.3</span> Responses to Climate Change — COP26</h3>
+              <ul>
+                <li><span class="nkw">Mitigation</span> — reducing emissions to slow climate change: renewable energy, electric vehicles, reforestation, carbon capture, reduced deforestation</li>
+                <li><span class="nkw">Adaptation</span> — adjusting to impacts already happening: sea walls, drought-resistant crops, flood early warning systems, managed retreat</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · International Climate Response</div>
+                <h4>COP26 — Glasgow, November 2021</h4>
+                <ul>
+                  <li><strong>What is COP?</strong> Conference of the Parties — annual UN climate summit where 197 countries negotiate action under the UNFCCC</li>
+                  <li><strong>Glasgow Climate Pact:</strong> first COP agreement to explicitly call for "<strong>phase down</strong>" of unabated coal (India and China blocked "phase out"); 1.5°C target reaffirmed; NDCs to be strengthened annually</li>
+                  <li><strong>Methane pledge:</strong> 100+ countries pledged to reduce methane by <strong>30% by 2030</strong> (from 2020 levels)</li>
+                  <li><strong>Deforestation pledge:</strong> 140 countries (90% of world's forests) pledged to end deforestation by <strong>2030</strong></li>
+                  <li><strong>Finance:</strong> $100bn/yr climate finance for developing countries — promised since 2009, still not fully delivered at time of COP26</li>
+                  <li><strong>Evaluation:</strong> praised for keeping 1.5°C alive; criticised for insufficient ambition, lack of binding commitments, and inadequate adaptation finance for LICs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /topic 5 -->
+
+        <!-- ══ TOPIC 6 — POPULATION ══ -->
+        <div class="notes-topic" id="nt6">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt6')">
+            <h2>Topic 6 · Population</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">6.1–6.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">6.1</span> Population Change</h3>
+              <p><span class="nkw">Natural increase</span> = Birth Rate − Death Rate. The <span class="nkw">Demographic Transition Model (DTM)</span> shows how birth and death rates change as countries develop:</p>
+              <ul>
+                <li><strong>Stage 1:</strong> High BR, High DR → fluctuating low population (pre-industrial; no countries remain here)</li>
+                <li><strong>Stage 2:</strong> High BR, Falling DR → rapid growth (many LICs — improved medicine, sanitation, food)</li>
+                <li><strong>Stage 3:</strong> Falling BR, Low DR → slowing growth (NEEs — urbanisation, education, women's rights)</li>
+                <li><strong>Stage 4:</strong> Low BR, Low DR → stable/slow growth (most HICs)</li>
+                <li><strong>Stage 5:</strong> BR below DR → natural decrease (Japan, Germany, some S. European countries)</li>
+              </ul>
+              <p>Population pyramids: wide base = youthful/high BR (LIC/Stage 2); top-heavy = ageing (HIC/Stage 4–5). Pyramid shape reflects DTM stage.</p>
+              <h4>Factors affecting birth rate</h4>
+              <p>Education of women (especially secondary+); contraception access; female employment; infant mortality rates; religious/cultural norms; government policy; urbanisation (children less economically valuable in cities).</p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">6.2</span> Population Policies</h3>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Anti-Natalist Policy</div>
+                <h4>China — One-Child Policy (1979–2015)</h4>
+                <ul>
+                  <li><strong>Policy:</strong> most urban couples limited to one child; rural families could have two if first was a girl; ethnic minorities exempt; enforced by fines, financial incentives, and in some areas coercive sterilisation/abortion</li>
+                  <li><strong>Results:</strong> fertility rate fell from <strong>~5.8 (1970) to ~1.5 (2000)</strong>; estimated 400 million fewer births; <span class="nkw">demographic dividend</span> accelerated economic growth (large working-age population, small dependants)</li>
+                  <li><strong>Problems:</strong> severe gender imbalance (male:female 1.18:1 by 2010 due to sex-selective abortion/infanticide); <span class="nkw">4-2-1 problem</span> (one adult child supporting two parents and four grandparents); ageing population crisis; human rights violations</li>
+                  <li><strong>Now:</strong> two-child (2015) → three-child (2021) → all limits removed (2023). Birth rate remains stubbornly low — urbanisation, cost of living, and cultural shift persist despite policy reversal</li>
+                </ul>
+                <div class="nph">[PHOTO: One-Child Policy propaganda poster or family planning billboard in China — archival/historical context]</div>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Pro-Natalist Policy</div>
+                <h4>France</h4>
+                <ul>
+                  <li><strong>Tools:</strong> generous family allowances per child from the second; free crèche from age 2; 16 weeks full-pay maternity leave; 28 days paternity leave; tax incentives (quotient familial) rewarding larger families</li>
+                  <li><strong>Result:</strong> France has one of Europe's highest fertility rates at <strong>~1.83 (2022)</strong> — well above EU average ~1.46, though still below replacement (2.1)</li>
+                  <li><strong>Evaluation:</strong> shows targeted financial and childcare support can maintain relatively higher birth rates; but cannot reach replacement level without immigration; cost ~3% of GDP on family policy</li>
+                </ul>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Youthful Population</div>
+                <h4>Uganda</h4>
+                <ul>
+                  <li>Total Fertility Rate <strong>~4.7</strong>; median age <strong>15.7 years</strong>; population <strong>48 million (2024)</strong>, projected 130 million by 2050</li>
+                  <li><strong>Causes of high growth:</strong> high cultural value of large families; limited female education; poor contraception access; high infant mortality encouraging more births; rural agricultural economy (children as labour)</li>
+                  <li><strong>Challenges:</strong> school system overwhelmed; high youth unemployment; land fragmentation; food insecurity; stretched government services</li>
+                  <li><strong>Potential:</strong> a <span class="nkw">demographic dividend</span> is possible if young people can be educated and employed — large working-age population could drive growth as it did in East Asia</li>
+                </ul>
+                <div class="nph">[PHOTO: Crowded Ugandan primary school classroom illustrating pressure of youthful population on education services]</div>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Ageing Population</div>
+                <h4>Japan</h4>
+                <ul>
+                  <li>Fertility rate <strong>~1.2 (2023)</strong> — lowest ever recorded; <strong>29% of population aged 65+</strong>; population declining since 2008</li>
+                  <li><strong>Causes:</strong> high cost of raising children in cities; long working hours culture; women prioritising careers; housing costs; cultural norms requiring marriage before children</li>
+                  <li><strong>Challenges:</strong> pension burden on shrinking workforce; labour shortages in manufacturing, nursing, construction; rural depopulation and "ghost villages"; national debt (240% of GDP) partly from escalating welfare costs</li>
+                  <li><strong>Responses:</strong> baby bonus schemes; extended childcare; encouraging female workforce participation; robotics and automation; cautious increase in skilled worker immigration (cultural resistance remains strong)</li>
+                  <li><strong>Evaluation:</strong> even significant policy intervention cannot quickly reverse low fertility entrenched in a highly urbanised, high-cost economy</li>
+                </ul>
+                <div class="nph">[PHOTO: Ageing Japan — elderly workers, or a depopulated rural Japanese village showing decline]</div>
+              </div>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">6.3</span> Migration</h3>
+              <p><span class="nkw">Push factors</span> drive people away (poverty, conflict, natural disaster, lack of opportunity). <span class="nkw">Pull factors</span> attract migrants (employment, safety, better services, family connections).</p>
+              <ul>
+                <li><strong>Benefits for host:</strong> fills labour shortages, demographic rejuvenation, tax contributions, skills, cultural diversity</li>
+                <li><strong>Costs for host:</strong> pressure on housing and services, political tensions, integration challenges</li>
+                <li><strong>Benefits for source:</strong> remittances, reduced population pressure</li>
+                <li><strong>Costs for source:</strong> <span class="nkw">brain drain</span> (loss of skilled workers), ageing rural populations, family disruption</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /topic 6 -->
+
+      </div><!-- /notes padding div — TOPICS 7-10 ADDED IN NEXT COMMIT -->
     </div><!-- /notes-tab -->
 
 </div><!-- /#main -->
@@ -849,10 +1136,6 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
     <button class="nav-btn" onclick="showTab('flash',this)">
       <span class="nav-icon">🃏</span>
       <span class="nav-label">Cards</span>
-    </button>
-    <button class="nav-btn" onclick="showTab('packs',this)">
-      <span class="nav-icon">📚</span>
-      <span class="nav-label">Packs</span>
     </button>
     <button class="nav-btn" onclick="showTab('exam',this)">
       <span class="nav-icon">✏️</span>
