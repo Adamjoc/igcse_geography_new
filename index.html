@@ -447,6 +447,17 @@ a.avatar-circle:active { transform: scale(0.94); }
           <div class="exam-paper-meta">75 marks · 1hr 45</div>
         </div>
       </div>
+      <div style="height:12px;"></div>
+      <div style="padding:0 16px;">
+        <div class="exam-paper-tile" style="border-color:#5C4A9E;display:flex;align-items:center;gap:14px;text-align:left;" onclick="openResourceBooklets()">
+          <div style="font-size:32px;flex-shrink:0;">📎</div>
+          <div>
+            <div class="exam-paper-title" style="text-align:left;">Resource Booklets</div>
+            <div class="exam-paper-sub" style="text-align:left;">Maps · Data · Photographs</div>
+            <div class="exam-paper-meta">Section A source materials — Papers 1 &amp; 2</div>
+          </div>
+        </div>
+      </div>
       <div style="height:14px;"></div>
       <div class="exam-info-box">
         <h3>📋 Exam Strategy</h3>
@@ -1345,6 +1356,45 @@ a.avatar-circle:active { transform: scale(0.94); }
     </div>
     <div class="ep-body" id="ep-body-content">
       <!-- Dynamically populated -->
+    </div>
+  </div>
+
+  <div id="resource-booklet-screen" style="display:none;position:fixed;inset:0;background:var(--parchment);z-index:300;flex-direction:column;">
+    <div class="ep-top">
+      <button class="ep-back" onclick="closeResourceBooklets()">←</button>
+      <div class="ep-title-block">
+        <div class="ep-title">Resource Booklets</div>
+        <div class="ep-sub">Cambridge IGCSE Geography 0460 · Section A source materials</div>
+      </div>
+    </div>
+    <div class="ep-body" style="padding:16px;">
+      <p style="font-family:'Nunito',sans-serif;font-size:13px;color:var(--text-light);margin-bottom:16px;">Section A of each paper is based on a resource booklet containing maps, graphs, photographs and data. Familiarise yourself with both before the exam.</p>
+      <div class="exam-paper-grid">
+        <a href="resource_booklet_p1.pdf" target="_blank" style="text-decoration:none;">
+          <div class="exam-paper-tile p1" style="cursor:pointer;">
+            <div class="exam-paper-icon">📗</div>
+            <div class="exam-paper-title">Paper 1</div>
+            <div class="exam-paper-sub">Physical Geography</div>
+            <div class="exam-paper-meta">Insert · Section A sources</div>
+          </div>
+        </a>
+        <a href="resource_booklet_p2.pdf" target="_blank" style="text-decoration:none;">
+          <div class="exam-paper-tile p2" style="cursor:pointer;">
+            <div class="exam-paper-icon">📙</div>
+            <div class="exam-paper-title">Paper 2</div>
+            <div class="exam-paper-sub">Human Geography</div>
+            <div class="exam-paper-meta">Insert · Section A sources</div>
+          </div>
+        </a>
+      </div>
+      <div style="height:16px;"></div>
+      <div class="exam-info-box">
+        <h3>📋 Using the Resource Booklet</h3>
+        <div class="exam-tip"><strong>Read it before the exam:</strong> You'll see it for the first time in the exam hall — but knowing the themes and source types reduces surprises.</div>
+        <div class="exam-tip"><strong>Section A only:</strong> The resource booklet applies to Q1 (compulsory, 25 marks). All sources will be labelled Fig. 1, Fig. 2 etc. in the question paper.</div>
+        <div class="exam-tip"><strong>Describe questions:</strong> Use data, labels and place names from the figures directly. Quote statistics precisely.</div>
+        <div class="exam-tip"><strong>Photographs:</strong> Describe what you can see — foreground, background, land use, features. Don't assume — only use evidence in the image.</div>
+      </div>
     </div>
   </div>
 
@@ -2878,6 +2928,20 @@ function openExamPaper(num) {
 
 function closeExamPaper() {
   document.getElementById('exam-paper-screen').classList.remove('open');
+  document.getElementById('main').style.display = '';
+  document.getElementById('nav').style.display = '';
+}
+
+function openResourceBooklets() {
+  const screen = document.getElementById('resource-booklet-screen');
+  screen.style.display = 'flex';
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('nav').style.display = 'none';
+  screen.scrollTop = 0;
+}
+
+function closeResourceBooklets() {
+  document.getElementById('resource-booklet-screen').style.display = 'none';
   document.getElementById('main').style.display = '';
   document.getElementById('nav').style.display = '';
 }
