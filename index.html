@@ -214,6 +214,41 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
 .screen { animation: fadeIn 0.2s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
+/* ── NOTES TAB ── */
+.notes-topic{margin-bottom:1.4rem;border:1px solid rgba(45,62,140,.14);border-radius:12px;overflow:hidden}
+.notes-topic-header{background:linear-gradient(135deg,#2D3E8C 0%,#1a2660 100%);color:#fff;padding:.9rem 1.1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;-webkit-user-select:none}
+.notes-topic-header h2{font-family:'Nunito',sans-serif;font-size:1rem;margin:0;color:#fff;font-weight:800}
+.notes-topic-header .ntopic-num{background:rgba(255,255,255,.18);border-radius:20px;padding:.1rem .55rem;font-size:.7rem;font-family:'Nunito',sans-serif;font-weight:700}
+.notes-topic-header .ntopic-chevron{transition:transform .3s;font-size:.85rem;flex-shrink:0}
+.notes-topic.nopen .notes-topic-header .ntopic-chevron{transform:rotate(180deg)}
+.notes-topic-body{display:none;padding:1.1rem 1.1rem 1.3rem;background:#fff}
+.notes-topic.nopen .notes-topic-body{display:block}
+.nsection{margin-bottom:1.5rem}
+.nsection h3{font-family:'Nunito',sans-serif;font-size:.95rem;color:#2D3E8C;border-left:4px solid #E8826B;padding-left:.6rem;margin:1rem 0 .45rem;font-weight:800}
+.nsection h4{font-family:'Nunito',sans-serif;font-size:.85rem;font-weight:800;color:#1a2660;margin:.7rem 0 .25rem}
+.nsection p,.nsection li{font-family:'Nunito Sans',sans-serif;font-size:.85rem;line-height:1.65;color:#2D3748}
+.nsection ul{padding-left:1.1rem;margin:.25rem 0 .5rem}
+.nsection ul li{margin-bottom:.22rem}
+.ncs{background:linear-gradient(135deg,#fff8f5,#fff3ee);border:1.5px solid #E8826B;border-radius:10px;padding:.9rem 1rem;margin:.7rem 0}
+.ncs .ncs-label{font-family:'Nunito',sans-serif;font-size:.65rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#E8826B;margin-bottom:.25rem}
+.ncs h4{font-family:'Nunito',sans-serif;font-size:.9rem;color:#2D3E8C;margin:0 0 .45rem;font-weight:800}
+.ncs p,.ncs li{font-size:.83rem;line-height:1.6;color:#2D3748;font-family:'Nunito Sans',sans-serif}
+.nkw{font-weight:800;color:#2D3E8C}
+.nph{background:#f0f3fa;border:2px dashed #9aa5d4;border-radius:8px;padding:.8rem;margin:.7rem 0;text-align:center;font-family:'Nunito Sans',sans-serif;font-size:.8rem;color:#5a6a9a;font-style:italic}
+.nph::before{content:"📷 "}
+.nbm{width:100%;border-collapse:collapse;font-family:'Nunito Sans',sans-serif;font-size:.8rem;margin:.7rem 0;border-radius:8px;overflow:hidden}
+.nbm thead tr{background:#2D3E8C;color:#fff}
+.nbm thead th{padding:.5rem .65rem;text-align:left;font-weight:700}
+.nbm tbody tr:nth-child(even){background:#f0f3fa}
+.nbm tbody tr:nth-child(odd){background:#fff}
+.nbm tbody td{padding:.4rem .65rem;border-bottom:1px solid #dde3f5;vertical-align:middle}
+.nup{color:#2a9d5c;font-weight:900}
+.ndn{color:#E8826B;font-weight:900}
+.nst{display:inline-block;background:#2D3E8C;color:#fff;font-family:'Nunito',sans-serif;font-size:.62rem;font-weight:700;border-radius:4px;padding:.08rem .38rem;margin-right:.25rem;vertical-align:middle}
+.nnew{display:inline-block;background:#E8826B;color:#fff;font-family:'Nunito',sans-serif;font-size:.62rem;font-weight:700;border-radius:4px;padding:.08rem .38rem;margin-left:.2rem;vertical-align:middle}
+.nintro{background:linear-gradient(135deg,#2D3E8C,#3d52b5);color:#fff;border-radius:12px;padding:.9rem 1.1rem;margin-bottom:1.1rem;font-family:'Nunito Sans',sans-serif;font-size:.83rem;line-height:1.55}
+.nintro strong{color:#ffd9d0}
+
 /* ── UTILITIES ── */
 .mt-8 { margin-top: 8px; }
 .pb-32 { padding-bottom: 32px; }
@@ -407,6 +442,287 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
       <div style="height:20px;"></div>
     </div>
 
+    <!-- ══ NOTES TAB ══ -->
+    <div id="notes-tab" class="screen">
+      <div class="screen-header">
+        <h1>Revision Notes</h1>
+        <p>All 10 topics · 2027 Cambridge 0460 syllabus</p>
+      </div>
+      <div style="padding:14px;">
+        <div class="nintro"><strong>Tap any topic to expand.</strong> Use these notes alongside your flashcards and practice papers. Case study facts are highlighted in orange boxes.</div>
+
+        <!-- ══ TOPIC 1 — RIVERS ══ -->
+        <div class="notes-topic nopen" id="nt1">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt1')">
+            <h2>Topic 1 · Changing River Environments</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">1.1–1.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">1.1.1</span> Drainage Basin Systems</h3>
+              <p>A <span class="nkw">drainage basin</span> is the area of land drained by a river and its tributaries — a system with inputs, processes, stores and outputs.</p>
+              <ul>
+                <li><span class="nkw">Watershed</span> — ridge of high land forming the boundary between drainage basins</li>
+                <li><span class="nkw">Tributary</span> — smaller river joining the main channel; <span class="nkw">Confluence</span> — where two rivers meet</li>
+                <li><span class="nkw">Discharge</span> — volume of water passing a point per second (m³/s = cumecs)</li>
+              </ul>
+              <p>A <span class="nkw">flood hydrograph</span> shows discharge over time after a storm. A steep rising limb and short lag time indicate a flashy basin. Causes: impermeable rock, steep slopes, little vegetation, urban surfaces, saturated soils.</p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.1.2</span> The Bradshaw Model <span class="nnew">NEW 2027</span></h3>
+              <p>Describes how river characteristics change <strong>downstream</strong> as discharge increases:</p>
+              <table class="nbm">
+                <thead><tr><th>Variable</th><th>Change downstream</th><th>Reason</th></tr></thead>
+                <tbody>
+                  <tr><td>Discharge</td><td><span class="nup">▲ Increases</span></td><td>More tributaries add water</td></tr>
+                  <tr><td>Velocity</td><td><span class="nup">▲ Increases</span></td><td>Smoother channel = less friction</td></tr>
+                  <tr><td>Channel width</td><td><span class="nup">▲ Increases</span></td><td>Lateral erosion widens channel</td></tr>
+                  <tr><td>Channel depth</td><td><span class="nup">▲ Increases</span></td><td>Erosion and deposition deepen channel</td></tr>
+                  <tr><td>Load quantity</td><td><span class="nup">▲ Increases</span></td><td>More tributaries add sediment</td></tr>
+                  <tr><td>Load particle size</td><td><span class="ndn">▼ Decreases</span></td><td>Attrition wears particles smaller</td></tr>
+                  <tr><td>Bed roughness</td><td><span class="ndn">▼ Decreases</span></td><td>Smaller, rounder particles smoother</td></tr>
+                  <tr><td>Gradient (slope)</td><td><span class="ndn">▼ Decreases</span></td><td>River approaches base level (sea)</td></tr>
+                </tbody>
+              </table>
+              <p><em>Exam tip: link changes between variables in your answers — the model is a simplification.</em></p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.2</span> River Processes</h3>
+              <h4>Erosion — 4 types</h4>
+              <ul>
+                <li><span class="nkw">Hydraulic action</span> — force of water compresses air in cracks, widening them</li>
+                <li><span class="nkw">Abrasion</span> — sediment scrapes and sandpapers the channel bed and banks</li>
+                <li><span class="nkw">Attrition</span> — particles collide, becoming smaller and rounder downstream</li>
+                <li><span class="nkw">Solution</span> — slightly acidic water dissolves soluble rock (limestone, chalk)</li>
+              </ul>
+              <h4>Transportation — 4 types</h4>
+              <ul>
+                <li><span class="nkw">Traction</span> — large boulders rolled along the bed</li>
+                <li><span class="nkw">Saltation</span> — pebbles bounce along the bed in a leaping motion</li>
+                <li><span class="nkw">Suspension</span> — fine silt and clay carried within the flow (gives rivers brown colour)</li>
+                <li><span class="nkw">Solution</span> — dissolved minerals transported invisibly in the water</li>
+              </ul>
+              <h4>Deposition</h4>
+              <p>Occurs when velocity falls and the river loses energy. Heaviest particles deposited first. Triggers: reduced gradient, increased friction, reduced discharge, flooding onto a floodplain.</p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.3</span> River Landforms</h3>
+              <h4>Upper course</h4>
+              <ul>
+                <li><span class="nkw">V-shaped valley</span> — dominant vertical erosion cuts downwards; steep sides, narrow floor</li>
+                <li><span class="nkw">Interlocking spurs</span> — river winds around resistant rock ridges that interlock like teeth</li>
+                <li><span class="nkw">Waterfalls &amp; gorges</span> — hard cap rock over softer rock; softer rock undercut → cap collapses → waterfall retreats upstream leaving a gorge</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Upper Course Landforms</div>
+                <h4>River Tees &amp; High Force Waterfall, NE England</h4>
+                <ul>
+                  <li>Drop of <strong>21 metres</strong> — one of England's largest waterfalls</li>
+                  <li>Hard <strong>Whin Sill dolerite</strong> cap rock overlies softer limestone and shale</li>
+                  <li>Hydraulic action and abrasion undercut softer rock → plunge pool → cap collapses → waterfall retreats upstream leaving a <strong>gorge ~500m long</strong></li>
+                  <li>Classic V-shaped valley and interlocking spurs visible upstream of High Force</li>
+                </ul>
+                <div class="nph">[PHOTO: High Force waterfall — dolerite cap rock, plunge pool, and gorge; geological layers clearly visible]</div>
+              </div>
+              <h4>Middle course</h4>
+              <ul>
+                <li><span class="nkw">Meanders</span> — fast flow on outer bank erodes (river cliff / bluff); slow flow on inner bank deposits (slip-off slope / point bar)</li>
+                <li><span class="nkw">Oxbow lakes</span> — meander neck narrows → river cuts through during flood → meander abandoned and sealed, forming a crescent lake</li>
+              </ul>
+              <div class="nph">[PHOTO: Aerial view of meandering river showing river cliffs, point bars, and an oxbow lake in the floodplain]</div>
+              <h4>Lower course</h4>
+              <ul>
+                <li><span class="nkw">Floodplain</span> — flat land either side of the channel; built up by alluvium during floods; fertile soils</li>
+                <li><span class="nkw">Levées</span> — natural embankments of coarse sediment beside the channel; coarsest particles drop first as velocity falls</li>
+                <li><span class="nkw">Delta</span> — high sediment load meets low-energy coast; sediment deposited faster than removed, building a fan of land</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Delta Opportunities <span class="nst">1.3.1</span></div>
+                <h4>Nile Delta, Egypt</h4>
+                <ul>
+                  <li>Extends <strong>160 km into the Mediterranean</strong>, covering ~22,000 km²</li>
+                  <li><strong>Agriculture:</strong> extraordinarily fertile alluvial soils; cotton, rice, vegetables; supports ~40 million people</li>
+                  <li><strong>Settlement &amp; trade:</strong> Egypt's most densely populated region; proximity to Alexandria and the Suez Canal</li>
+                  <li><strong>Threat:</strong> Aswan High Dam (1970) traps sediment upstream → delta no longer replenished → <strong>coastal erosion up to 100m/year</strong> in places; rising sea levels accelerate this</li>
+                </ul>
+                <div class="nph">[PHOTO: Satellite image of Nile Delta — fan shape, green agricultural land against desert, Mediterranean coastline]</div>
+              </div>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.3.5–1.3.7</span> River Pollution <span class="nnew">NEW 2027</span></h3>
+              <h4>Causes</h4>
+              <ul>
+                <li><span class="nkw">Agricultural runoff</span> — fertilisers (nitrates/phosphates) cause <span class="nkw">eutrophication</span> (algal blooms deplete oxygen, killing aquatic life); pesticides toxic to organisms</li>
+                <li><span class="nkw">Industrial effluent</span> — heavy metals (lead, cadmium, mercury), chemicals, dyes, thermal pollution</li>
+                <li><span class="nkw">Sewage</span> — untreated domestic waste introduces bacteria and pathogens; major issue in rapidly urbanising LIC cities</li>
+                <li><span class="nkw">Mining</span> — acid drainage, heavy metals leach into rivers</li>
+                <li><span class="nkw">Urban runoff</span> — oil, metals from roads washed in during rain events</li>
+              </ul>
+              <h4>Impacts</h4>
+              <ul>
+                <li><span class="nkw">Ecological:</span> biodiversity loss, fish kills, food chain collapse</li>
+                <li><span class="nkw">Health:</span> drinking water contamination (cholera, typhoid, heavy metal poisoning); elevated cancer rates near industrial polluters</li>
+                <li><span class="nkw">Economic:</span> fishing industry collapse, tourism decline, costly water treatment</li>
+                <li><span class="nkw">Social:</span> disproportionate impact on poorer communities living closest to polluting industries</li>
+              </ul>
+              <h4>Management</h4>
+              <ul>
+                <li>Environmental legislation and the <span class="nkw">Polluter Pays Principle</span></li>
+                <li>Wastewater treatment plants; riparian buffer zones (vegetation strips intercept agricultural runoff)</li>
+                <li>International agreements for cross-border rivers; water quality monitoring and enforcement</li>
+              </ul>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.3.8</span> River Flooding — Bangladesh</h3>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · River Flooding</div>
+                <h4>Bangladesh — Ganges–Brahmaputra Delta</h4>
+                <p><strong>Background:</strong> ~<strong>80% of Bangladesh is floodplain</strong>, less than 1m above sea level. Three rivers — the Ganges, Brahmaputra, and Meghna — converge here, draining a vast Himalayan catchment.</p>
+                <h4>Physical causes</h4>
+                <ul>
+                  <li>Heavy <strong>monsoon rainfall</strong> (June–September): ~80% of Bangladesh's 2,000mm annual rainfall falls in this period</li>
+                  <li><strong>Himalayan snowmelt</strong> adds to discharge in summer; flat deltaic topography — water has nowhere to drain</li>
+                  <li>Bay of Bengal storm surges push seawater inland</li>
+                </ul>
+                <h4>Human causes</h4>
+                <ul>
+                  <li><strong>Deforestation</strong> in Nepal and northern India increases runoff reaching Bangladesh</li>
+                  <li><strong>Population pressure</strong> forces settlement on flood-prone chars (river islands)</li>
+                  <li>Inadequate urban drainage; climate change intensifying monsoons and sea level rise</li>
+                </ul>
+                <h4>Impacts</h4>
+                <ul>
+                  <li><strong>Social:</strong> millions displaced annually; homes destroyed; deaths from drowning and waterborne disease; disruption to education</li>
+                  <li><strong>Economic:</strong> rice and jute crops destroyed; transport links cut; Bangladesh loses estimated <strong>1–2% of GDP</strong> annually to flooding</li>
+                </ul>
+                <h4>Responses</h4>
+                <ul>
+                  <li><strong>Flood Action Plan:</strong> embankments (flood bunds) along major rivers — effective but can increase intensity elsewhere if breached</li>
+                  <li><strong>Early warning systems:</strong> satellite monitoring gives several days' notice; community radio reaches rural areas</li>
+                  <li><strong>Flood-resistant housing:</strong> raised plinths, flood shelters, raised evacuation roads; World Bank and NGO support</li>
+                </ul>
+                <div class="nph">[PHOTO: Aerial view of flooded Bangladeshi villages and rice fields during monsoon — buildings surrounded by water]</div>
+                <div class="nph">[PHOTO: Bangladeshi people wading through floodwater carrying belongings]</div>
+                <div class="nph">[PHOTO: Raised flood shelter or community building on stilts/plinth in rural Bangladesh]</div>
+              </div>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">1.3.9</span> Pollution Case Study — Pearl River Delta <span class="nnew">NEW 2027</span></h3>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · River Pollution</div>
+                <h4>Pearl River Delta (PRD), Southern China</h4>
+                <p><strong>Context:</strong> Encompasses Guangzhou, Shenzhen, Dongguan, and Hong Kong — a megalopolis of <strong>~75 million people</strong>. China's <span class="nkw">Special Economic Zones (SEZs)</span> policy from 1979 prioritised rapid industrial growth, making the PRD the "world's factory".</p>
+                <h4>Causes</h4>
+                <ul>
+                  <li><strong>Industrial effluent:</strong> electronics, textiles, plastics, metal processing discharged heavy metals (lead, cadmium), dyes, chemicals directly into rivers</li>
+                  <li><strong>E-waste — Guiyu:</strong> the "world's e-waste capital"; informal dismantling of discarded electronics; burning and acid-washing released toxic lead, mercury, dioxins</li>
+                  <li><strong>Rapid urbanisation:</strong> inadequate sewage infrastructure; untreated waste into waterways</li>
+                  <li><strong>Air pollution:</strong> coal power and factory emissions; PM2.5 regularly <strong>10× WHO safe limits</strong></li>
+                </ul>
+                <h4>Impacts</h4>
+                <ul>
+                  <li><strong>Water:</strong> by 2005, <strong>80% of Pearl River tributaries</strong> rated unfit for human use; fish stocks collapsed; drinking water for millions compromised</li>
+                  <li><strong>Health:</strong> <span class="nkw">"Cancer villages"</span> — elevated cancer rates, respiratory disease, birth defects along contaminated tributaries; in Guiyu, children's blood lead levels <strong>6× acceptable limits</strong></li>
+                  <li><strong>Ecological:</strong> aquatic biodiversity loss; contaminated farmland soils</li>
+                </ul>
+                <h4>Responses</h4>
+                <ul>
+                  <li><strong>Pearl River Clean-Up:</strong> wastewater treatment plants; water quality in main channel improved significantly by 2020</li>
+                  <li><strong>Air quality:</strong> coal replaced by gas/renewables; vehicle standards tightened; PM2.5 fell <strong>~35% between 2013 and 2020</strong></li>
+                  <li><strong>Factory relocation:</strong> most polluting industries moved inland or overseas; PRD shifting to high-tech and services</li>
+                  <li><strong>Guiyu:</strong> formal regulated e-waste recycling park opened 2014; informal dismantling significantly reduced</li>
+                  <li><strong>Legislation:</strong> environmental courts; Polluter Pays enforcement; environmental targets in officials' performance assessments</li>
+                </ul>
+                <div class="nph">[PHOTO: Pearl River tributary — brown/murky polluted water, industrial backdrop, visible discharge]</div>
+                <div class="nph">[PHOTO: Industrial plant with discharge pipe into river in the Pearl River Delta region]</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /topic 1 -->
+
+        <!-- ══ TOPIC 2 — COASTS ══ -->
+        <div class="notes-topic" id="nt2">
+          <div class="notes-topic-header" onclick="toggleNotesTopic('nt2')">
+            <h2>Topic 2 · Changing Coastal Environments</h2>
+            <span style="display:flex;gap:.5rem;align-items:center"><span class="ntopic-num">2.1–2.3</span><span class="ntopic-chevron">▼</span></span>
+          </div>
+          <div class="notes-topic-body">
+            <div class="nsection">
+              <h3><span class="nst">2.1</span> Coastal Processes</h3>
+              <p><span class="nkw">Fetch</span> = distance of open water over which wind blows; greater fetch = more powerful waves.</p>
+              <ul>
+                <li><span class="nkw">Constructive waves</span> — low frequency (6–8/min), strong swash, weak backwash → deposition → builds beaches</li>
+                <li><span class="nkw">Destructive waves</span> — high frequency (10–14/min), weak swash, strong backwash → erosion → cliff retreat</li>
+              </ul>
+              <h4>Erosion — same 4 processes as rivers</h4>
+              <ul>
+                <li><span class="nkw">Hydraulic action</span> — wave impact compresses air in cracks (most powerful in storms)</li>
+                <li><span class="nkw">Abrasion</span> — waves hurl sediment against the cliff face, undercutting it</li>
+                <li><span class="nkw">Attrition</span> — particles wear each other down during transport</li>
+                <li><span class="nkw">Solution</span> — seawater dissolves limestone and chalk</li>
+              </ul>
+              <h4>Longshore drift (LSD)</h4>
+              <p>Waves approach beach at an angle; swash carries sediment up at the wave angle; backwash returns it straight down (gravity). Net movement is along the coast. Controls formation of spits, bars, and tombolos.</p>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">2.2</span> Coastal Landforms</h3>
+              <h4>Erosional</h4>
+              <ul>
+                <li><span class="nkw">Wave-cut notch &amp; platform</span> — waves attack cliff at waterline → notch → cliff collapse → retreating platform of rock at wave level</li>
+                <li><span class="nkw">Caves → arches → stacks → stumps</span> — hydraulic action exploits weaknesses in headlands; progressive collapse sequence</li>
+                <li><span class="nkw">Bays and headlands</span> — alternating hard/soft rock; soft rock erodes into bays, hard rock resists as headlands</li>
+              </ul>
+              <h4>Depositional</h4>
+              <ul>
+                <li><span class="nkw">Beach</span> — sediment accumulates in sheltered zone between tides</li>
+                <li><span class="nkw">Spit</span> — LSD extends beach into open water; curves where wind direction changes; salt marsh forms behind</li>
+                <li><span class="nkw">Bar</span> — spit extends across a bay, trapping a lagoon; <span class="nkw">Tombolo</span> — spit connects mainland to offshore island</li>
+              </ul>
+            </div>
+            <div class="nsection">
+              <h3><span class="nst">2.3</span> Coastal Management</h3>
+              <h4>Hard engineering</h4>
+              <ul>
+                <li><span class="nkw">Sea walls</span> — reflect wave energy; expensive but effective; can cause erosion downdrift</li>
+                <li><span class="nkw">Groynes</span> — interrupt LSD, build up beach; cause erosion beyond the groyne field</li>
+                <li><span class="nkw">Rock armour (rip-rap)</span> — boulders absorb wave energy; cheaper; visually impactful</li>
+              </ul>
+              <h4>Soft engineering</h4>
+              <ul>
+                <li><span class="nkw">Beach nourishment</span> — adding imported sand/shingle; needs regular replacement; natural appearance</li>
+                <li><span class="nkw">Dune stabilisation</span> — marram grass planting; low cost; ecological benefit</li>
+                <li><span class="nkw">Managed retreat</span> — allowing coastline to move inland; cheapest option; politically difficult</li>
+              </ul>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Coastal Erosional Landforms</div>
+                <h4>Ponta da Piedade, Algarve, Portugal</h4>
+                <ul>
+                  <li>Jurassic <strong>limestone and sandstone</strong> headland near Lagos, southern Algarve</li>
+                  <li>Differential erosion has created <strong>caves, arches, stacks, and grottos</strong> — a textbook erosional sequence</li>
+                  <li>Harder layers form resistant arches; collapsed arches form isolated stacks; wave-cut notches visible at cliff bases</li>
+                  <li>Atlantic swell waves drive hydraulic action and abrasion; tourist pressure adds footpath erosion as a management challenge</li>
+                </ul>
+                <div class="nph">[PHOTO: Ponta da Piedade — golden limestone arches, sea stacks, and grottos showing the full erosional sequence]</div>
+              </div>
+              <div class="ncs">
+                <div class="ncs-label">Case Study · Coastal Management</div>
+                <h4>Costa da Caparica, Portugal</h4>
+                <ul>
+                  <li><strong>25 km sandy Atlantic beach</strong> south of Lisbon; popular tourism and residential development in former dune system</li>
+                  <li><strong>Problem:</strong> storm erosion removes up to <strong>3–4 metres of beach/year</strong>; urban development exposes infrastructure; rising sea levels increase storm risk</li>
+                  <li><strong>Hard management:</strong> groynes interrupt LSD; sea walls on developed sections; periodic beach nourishment with dredged offshore sand</li>
+                  <li><strong>Soft management:</strong> dune restoration; marram grass planting; pedestrian boardwalks to protect dune vegetation</li>
+                  <li><strong>Evaluation:</strong> groynes maintain beach width locally but cause downdrift erosion; nourishment expensive and temporary; managed retreat politically difficult given tourism economy</li>
+                </ul>
+                <div class="nph">[PHOTO: Costa da Caparica beach showing groynes extending into the Atlantic, beach settlement, and dunes behind]</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /topic 2 -->
+
+      </div><!-- /notes padding div — TOPICS 3-10 ADDED IN NEXT COMMITS -->
+    </div><!-- /notes-tab -->
+
 </div><!-- /#main -->
 
   <!-- QUIZ ENGINE (full-screen overlay) -->
@@ -512,6 +828,10 @@ html, body { height: 100%; overflow: hidden; background: var(--parchment); font-
     <button class="nav-btn" onclick="showTab('exam',this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><circle cx="6" cy="7" r="0.5" fill="currentColor"/><circle cx="6" cy="11" r="0.5" fill="currentColor"/><circle cx="6" cy="15" r="0.5" fill="currentColor"/></svg>
       <span class="nav-label">Exam</span>
+    </button>
+    <button class="nav-btn" onclick="showTab('notes',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span class="nav-label">Notes</span>
     </button>
   </nav>
 </div>
@@ -1051,7 +1371,7 @@ function showTab(tab, btn) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
 
-  const screenMap = { home: 'home', quiz: 'quiz-tab', flash: 'flash-tab', packs: 'packs-tab', exam: 'exam-tab' };
+  const screenMap = { home: 'home', quiz: 'quiz-tab', flash: 'flash-tab', packs: 'packs-tab', exam: 'exam-tab', notes: 'notes-tab' };
   document.getElementById(screenMap[tab]).classList.add('active');
   btn.classList.add('active');
   currentTab = tab;
@@ -2032,6 +2352,11 @@ function toggleAnswer(btn) {
   answer.classList.toggle('visible', !shown);
   btn.classList.toggle('shown', !shown);
   btn.textContent = shown ? '▸ Show model answer' : '▾ Hide model answer';
+}
+
+function toggleNotesTopic(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('nopen');
 }
 
 </script>
